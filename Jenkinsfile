@@ -46,7 +46,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     sh '''
-                        ./mvnw -B sonar:sonar \
+                        ./mvnw -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                           -Dsonar.projectKey=mon-projet-springboot \
                           -Dsonar.projectName=mon-projet-springboot
                     '''
