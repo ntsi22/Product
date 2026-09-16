@@ -15,6 +15,10 @@ pipeline {
 
         stage('Compilation') {
             steps {
+           		sh 'java -version'
+        		sh 'javac -version'
+        		sh './mvnw -version'
+
                 sh 'chmod +x mvnw'
                 sh './mvnw -B clean compile'
             }
